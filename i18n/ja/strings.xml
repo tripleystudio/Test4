@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<string name="welcome">%sへようこそ!</string>
+	<string name="home">ホーム</string>
+	<string name="setting">設定</string>
+	<string name="shop">ショップ</string>
+</resources>
