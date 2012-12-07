@@ -19,8 +19,8 @@ if (Ti.version < 1.8 ) {
 	var isTablet = osname === 'ipad' || (osname === 'android' && (width > 899 || height > 899));
 	isTablet = true;
 	
+	
+	
 	var ApplicationTabGroup = require('ApplicationTabGroup');
 	new ApplicationTabGroup().open();
 })();
-
-
