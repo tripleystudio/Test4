@@ -6,7 +6,7 @@ function GetSaveData(window)
 	http.onload  = function() 
 	{
 	    this.data = this.responseData;
-		Ti.API.info("data"+this.data);
+		Ti.API.info("data:"+this.data);
 	}
 	http.send();
 }

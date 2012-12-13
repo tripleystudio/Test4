@@ -19,7 +19,7 @@ function Zukan(title)
 		var re = ""+this.data;
 		var res = re.split(",");
 		
-		var sampledata_list = [{text: res[0]}, {text: res[1]}, {text: res[2]}, {text: 'サンプル4'}, {text: 'サンプル5'}]; 
+		var sampledata_list = [{text: res[0]}, {text: res[2]}, {text: res[4]}, {text: res[6]}, {text: 'サンプル5'}]; 
 		var data = []; 
 		
 	    var photo = Ti.UI.createView({

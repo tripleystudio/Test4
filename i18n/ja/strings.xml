@@ -2,6 +2,7 @@
 <resources>
 	<string name="welcome">%sへようこそ!</string>
 	<string name="home">ホーム</string>
-	<string name="setting">設定</string>
+	<string name="config">設定</string>
 	<string name="shop">ショップ</string>
+	<string name="zukan">図鑑</string>
 </resources>

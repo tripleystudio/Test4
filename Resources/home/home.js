@@ -6,31 +6,41 @@ function HomeScene(title)
 		title : title
 	});
 
-// Obtain game module
-var quicktigame2d = require('com.googlecode.quicktigame2d');
+	// Obtain game module
+	var quicktigame2d = require('com.googlecode.quicktigame2d');
+	
+	// Create view for your game.
+	// Note that game.screen.width and height are not yet set until the game is loaded
+	var game = quicktigame2d.createGameView();
 
-// Create view for your game.
-// Note that game.screen.width and height are not yet set until the game is loaded
-var game = quicktigame2d.createGameView();
+	// Frame rate can be changed (fps can not be changed after the game is loaded)
+	game.fps = 30;
+	
+	// set initial background color to black
+	game.color(1.0, 1.0, 1.0);
 
-// Frame rate can be changed (fps can not be changed after the game is loaded)
-game.fps = 30;
+	game.debug = true;
+	
+	var shapes = new Array();
+	
+	// Create game scene
+	var scene = quicktigame2d.createScene();
 
-// set initial background color to black
-game.color(1.0, 1.0, 1.0);
+	scene.color(1.0,1.0,1.0);
+	// add your scene to game view
+	game.pushScene(scene);
 
-game.debug = true;
-
-var shapes = new Array();
-
-// Create game scene
-var scene = quicktigame2d.createScene();
-
-scene.color(1.0,1.0,1.0);
-// add your scene to game view
-game.pushScene(scene);
-
-var TOUCH_SCALE = 1;
+	var TOUCH_SCALE = 1;
+	
+	
+	var img_head = quicktigame2d.createSprite({
+	//	width:720, 
+	//	height:480, 
+		image:'head.png',
+		top:0,
+		width : 640,
+		height : 332
+		});	
 
 
 
@@ -48,7 +58,9 @@ game.addEventListener('onload', function(e) {
 
 var txt_debug = quicktigame2d.createSprite(
 	{
-		text : "aaaa"
+		text : "aaaa",
+		top : 150
+		
 	});
 
 var img_ketu = quicktigame2d.createSprite({
@@ -61,8 +73,10 @@ var img_ketu = quicktigame2d.createSprite({
 	});
 	
 	Ti.API.info("ScreenX:"+game.screen.width);
-	img_ketu.center = {x:Titanium.Platform.displayCaps.platformWidth/2 , y:150};
+	img_head.center = {x:Titanium.Platform.displayCaps.platformWidth/2 , top:0};
+	img_ketu.center = {x:Titanium.Platform.displayCaps.platformWidth/2 , top:540};
 	scene.add(img_ketu);
+	scene.add(img_head);
 	scene.add(txt_debug);
 
 function Random( v )
