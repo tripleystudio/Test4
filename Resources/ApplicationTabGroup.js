@@ -37,7 +37,7 @@ function ApplicationTabGroup()
 	
 	win3.containingTab = tab3;	
 	
-	var tab3 = Ti.UI.createTab({
+	var tab4 = Ti.UI.createTab({
 		title: L('config'),
 		icon: '/images/KS_nav_views.png',
 		window: win4
