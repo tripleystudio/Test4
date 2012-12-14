@@ -1,7 +1,7 @@
 var base = Ti.UI.currentWindow;
  
  
-var btn_next = Titanium.UI.createButton({
+var btn_next = Ti.UI.createButton({
   title:'Open Window 2',
 	bottom:35,
 	width:225,
@@ -9,7 +9,7 @@ var btn_next = Titanium.UI.createButton({
 	font:{fontFamily:'Arial',fontWeight:'bold',fontSize:14}
 });
 
-base.add(btn_next);
+//base.add(btn_next);
 
 
 //var base = Ti.UI.createWindow();
@@ -20,22 +20,11 @@ var nav  = Ti.UI.iPhone.createNavigationGroup({
 */
 //base.add(nav);
 
-	var rows = [
-	    {title:'Row 1', hasChild:true},
-	    {title:'Row 2', hasDetail:true},
-	    {title:'Row 3', hasCheck:true},
-	    {title:'Row 4'}
-	];
-    var list = Ti.UI.createTableView({
-      data : rows
-    });
-	base.add(list);
-
 	//base.open();
 
 //base.addEventListener('click',function(){
 	
-	/*
+	
   var http = Ti.Network.createHTTPClient();
   http.open('GET','http://makers.sakura.ne.jp/chi/getShop.php?category=1');
   http.onload = function(){
@@ -64,7 +53,7 @@ var nav  = Ti.UI.iPhone.createNavigationGroup({
       data : data,
     });
     list.addEventListener('click',function(e){
-    	/*
+    	
 		var alertDialog = Titanium.UI.createAlertDialog({
 		    title: 'キャンセルのテスト',
 		    message: 'テスト',
@@ -73,15 +62,14 @@ var nav  = Ti.UI.iPhone.createNavigationGroup({
 		    cancel: 1
 		});
 	    alertDialog.show();	
-	    */
-/*
+	    
+
     });
     base.add(list);
     base.open();
   };
   http.send();
   
-  */
 //});
 
 /*

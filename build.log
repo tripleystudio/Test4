@@ -6,11 +6,12 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.013000 seconds on emulator to get ready
+[DEBUG] waited 0.015000 seconds on emulator to get ready
 [DEBUG] com.example.Test4 installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
+[TRACE] COPYING MODIFIED FILE: C:\Users\yoshiki\My Documents\Titanium_Studio_Workspace\Test4\Resources\home\home.js => C:\Users\yoshiki\My Documents\Titanium_Studio_Workspace\Test4\build\android\bin\assets\Resources\home\home.js
 [INFO] Tiapp.xml unchanged, skipping class generation
 [DEBUG] Processing Android resource drawables
 [DEBUG] found special platform files dir = C:\Users\yoshiki\My Documents\Titanium_Studio_Workspace\Test4\platform\android
@@ -29,4 +30,5 @@ Logfile initialized
 [INFO] Re-launching application ... Test4
 [INFO] Launching application ... Test4
 [TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.example.Test4/.Test4Activity }
+Warning: Activity not started, its current task has been brought to the front
 
