@@ -24,8 +24,31 @@ function ShopScene(title)
 		height : 100
 	});
 	
+	// intent
+/*	
+button1.addEventListener(
+    'click',
+    function(){
+        Ti.API.debug('create intent');
+        var intent = Titanium.Android.createServiceIntent( { url: 'testservice.js' } );
+        intent.putExtra('interval', 10000);
+        intent.putExtra('twitter_id', 'kurain');
+        var service = Titanium.Android.createService(intent);
+        service.start();
+    }
+);
+*/	
 	B1.addEventListener('click', function(e){
+		
+	    var win2 = Ti.UI.createWindow({
+	    url:'../list/winwin.js',
+	    title:'Win 2',
+	    backgroundColor:'#fff',
+	    home:function() {}
+	  });
+       win2.open();
     });	
+	
 	
 	var B2 = Titanium.UI.createButton({
 		backgroundImage:'/images/b1.png', //Imageの場合、透過にならない。
