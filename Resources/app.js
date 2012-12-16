@@ -8,6 +8,9 @@ if (Ti.version < 1.8 ) {
 // This is a single context application with mutliple windows in a stack
 (function() 
 {
+	
+	Ti.API.debug("☆☆☆☆☆☆☆SSSSSTART");
+	
 	//determine platform and form factor and render approproate components
 	var osname = Ti.Platform.osname,
 		version = Ti.Platform.version,

@@ -9,10 +9,14 @@ function ApplicationTabGroup()
 	var ConfigScene = require('home/config');
 	
 	//create app tabs
-	var win1 = new HomeScene(L('home')),
-		win2 = new ShopScene(L('shop')),
-		win3 = new Zukan(L('zukan')),
-		win4 = new ConfigScene(L('config'));
+	var win1 = new HomeScene(L('home'));
+	//var win2 = new HomeScene(L('home'));
+	//var win3 = new HomeScene(L('home'));
+	var win4 = new HomeScene(L('home'));
+	var	win2 = new ShopScene(L('shop'));
+	var win3 = new Zukan(L('zukan'));
+	//var win4 = new ConfigScene(L('config'));
+		
 	
 	var tab1 = Ti.UI.createTab({
 		title: L('home'),
@@ -26,7 +30,6 @@ function ApplicationTabGroup()
 		icon: '/images/KS_nav_views.png',		
 		window: win2
 	});	
-	
 	win2.containingTab = tab2;
 	
 	var tab3 = Ti.UI.createTab({

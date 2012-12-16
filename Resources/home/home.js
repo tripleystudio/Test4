@@ -1,25 +1,32 @@
 
+//var quicktigame2d = require('com.googlecode.quicktigame2d');
+//var game = quicktigame2d.createGameView();
+
 function HomeScene(title) 
 {
 	var window = Ti.UI.createWindow({
 		backgroundColor:'white',
-		title : title
+		title : title,
+		navBarHidden:true,
+		exitOnClose:false		
 	});
+	
+	Ti.API.info("ログログログ■■■■ｖｖ");
 
 	// Obtain game module
-	var quicktigame2d = require('com.googlecode.quicktigame2d');
+	//var quicktigame2d = require('com.googlecode.quicktigame2d');
 	
 	// Create view for your game.
 	// Note that game.screen.width and height are not yet set until the game is loaded
-	var game = quicktigame2d.createGameView();
-
+	
+/*
 	// Frame rate can be changed (fps can not be changed after the game is loaded)
 	game.fps = 30;
 	
 	// set initial background color to black
 	game.color(1.0, 1.0, 1.0);
 
-	game.debug = true;
+	//game.debug = true;
 	
 	var shapes = new Array();
 	
@@ -113,28 +120,9 @@ game.addEventListener('enterframe', function(e) {
 
 // NETWORK
 // 接続状態が変わる度にイベントを発生させるリスナーです。
-/*
-Titanium.Network.addConnectivityListener('change', function(e) {
-    var online = e.online;
-    var type = e.networkType;
-    var networkTypeName = e.networkTypeName;
-});
-*/
 
-/* 
- * Listener function for 'touchstart' and 'touchstart_pointer' events.
- * Before using touch event, call registerForMultiTouch() to enable multi touch support.
- *
- * Note that ALL gesture events including 'click' and 'dblclick' are disabled on Android
- * when multi touch support is enabled
- * 
- * Use e.points to handle multiple pointers. 
- *
- * 'touchstart_pointer' is called when a non-primary pointer has gone down on Android.
- * 'touchstart_pointer' event is never used on iOS.
- * 
- * See http://developer.android.com/reference/android/view/MotionEvent.html for details about motion events on Android.
- */
+
+
 var onTouchStart = function(e) {
     
     // On Android, 'touchstart_pointer' event is called right after firing 'touchstart' event when multi touch is detected.
@@ -162,19 +150,7 @@ var onTouchStart = function(e) {
     push = true;
 };
 
-/* 
- * Listener function for 'touchend' and 'touchend_pointer' events.
- * Before using touch event, call registerForMultiTouch() to enable multi touch support.
- * Use e.points to handle multiple pointers
- *
- * Note that ALL gesture events including 'click' and 'dblclick' are disabled on Android
- * when multi touch support is enabled
- *
- * 'touchend_pointer' is called when a non-primary pointer has gone up on Android.
- * 'touchend_pointer' event is never used on iOS.
- * 
- * See http://developer.android.com/reference/android/view/MotionEvent.html for details about motion events on Android.
- */
+
 var onTouchEnd = function(e) {
     
     // On Android, 'touchend_pointer' event is called before firing 'touchend' event when multi touch is detected.
@@ -207,15 +183,6 @@ var onTouchEnd = function(e) {
     push = false;
 };
 
-/* 
- * Listener function for 'touchmove' events.
- * Before using touch event, call registerForMultiTouch() to enable multi touch support.
- * Use e.points to handle multiple pointers
- *
- * Note that ALL gesture events including 'click' and 'dblclick' are disabled on Android
- * when multi touch support is enabled
- *
- */
 
 game.addEventListener('touchstart', onTouchStart);
 game.addEventListener('touchmove',  onTouchStart);
@@ -223,9 +190,11 @@ game.addEventListener('touchstart_pointer', onTouchStart); // Called only on And
 
 game.addEventListener('touchend', onTouchEnd);
 game.addEventListener('touchend_pointer', onTouchEnd); // Called only on Android
-
+*/
 // Add your game view
-window.add(game);
+//window.add(game);
+
+
 //window.open({fullscreen:true, navBarHidden:true});var window = Ti.UI.createWindow({backgroundColor:'black'});
 return window;
 };

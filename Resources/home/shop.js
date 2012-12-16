@@ -3,8 +3,11 @@ function ShopScene(title)
 {
 	var window = Ti.UI.createWindow({
 		backgroundColor:'white',
-		title : title
+		title : title,
+		navBarHidden:true,
+		exitOnClose:false
 	});	
+
 	
 	var	height = Ti.Platform.displayCaps.platformHeight;
 	var	width = Ti.Platform.displayCaps.platformWidth;	
@@ -38,20 +41,38 @@ button1.addEventListener(
     }
 );
 */	
+
+	B1.addEventListener('click', function() {
+		//containingTab attribute must be set by parent tab group on
+		//the window for this work
+		window.containingTab.open(Ti.UI.createWindow({
+			title: L('shop'),
+			url:'../list/winwin.js',
+			backgroundColor: 'white'
+		}));
+	});
+
+	/*
 	B1.addEventListener('click', function(e){
 		
 	    var win2 = Ti.UI.createWindow({
 	    url:'../list/winwin.js',
 	    title:'Win 2',
 	    backgroundColor:'#fff',
+		navBarHidden:true,
+		exitOnClose:false,	    
 	    home:function() {}
 	  });
+
+	  
        win2.open();
-    });	
+    });
+    */
+    	
 	
 	
 	var B2 = Titanium.UI.createButton({
-		backgroundImage:'/images/b1.png', //Imageの場合、透過にならない。
+		Image:'/images/b1.png', //Imageの場合、透過にならない。
 		
 		top : 480,
 		width : 640,
