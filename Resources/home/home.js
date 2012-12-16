@@ -2,8 +2,51 @@
 //var quicktigame2d = require('com.googlecode.quicktigame2d');
 //var game = quicktigame2d.createGameView();
 
+	var	height = Ti.Platform.displayCaps.platformHeight;
+	var	width = Ti.Platform.displayCaps.platformWidth;
+	
+	var scale = 1.0;
+	
+    var Message = Ti.UI.createLabel({  
+  		left:20,
+        top:150  
+    }); 	
+	var count = 0;
+	
+	var img = [];
+	
+	   var U1 = Ti.UI.createImageView({  
+	        url:'/images/chichi/un_00.png',  
+	        top:0  
+	    }); 	
+	   var U2 = Ti.UI.createImageView({  
+	        url:'/images/chichi/un_01.png',  
+	        top:0  
+	    }); 	
+	   var U3 = Ti.UI.createImageView({  
+	        url:'/images/chichi/un_02.png',  
+	        top:0  
+	    }); 	
+	
+setInterval(function() {
+	
+	count++;
+	Message.text = "はやく～"+count;
+	if(count > 200) count = 0;
+	
+	for(var i = 0;i< 100;i++)
+	{
+		//img[i].
+	img[i].top += (Math.random() % 250) * 15;
+	
+	if(img[i].top > height) img[i].top = 0;
+	//img[i].left = ((i % 20) * 400);
+	}
+}, 33);	
+
 function HomeScene(title) 
 {
+	
 	var window = Ti.UI.createWindow({
 		backgroundColor:'white',
 		title : title,
@@ -11,13 +54,40 @@ function HomeScene(title)
 		exitOnClose:false		
 	});
 	
-	Ti.API.info("ログログログ■■■■ｖｖ");
+
 
 	// Obtain game module
 	//var quicktigame2d = require('com.googlecode.quicktigame2d');
 	
 	// Create view for your game.
 	// Note that game.screen.width and height are not yet set until the game is loaded
+    var H1 = Ti.UI.createImageView({  
+        url:'/images/Top_header.jpg',  
+        top:0  
+    }); 	
+    
+    var Point = Ti.UI.createLabel({  
+        color:"#000000",  
+        font:{fontSize:32,fontWeight:'bold'},  
+        top:65,  
+//        left:70,  
+        right:220,  
+        height:'auto'  
+    });     
+	Point.text = "20000";
+	
+	
+    Message.text = "テスト中///";
+	
+    var H2 = Ti.UI.createImageView({  
+        url:'/images/hall000.jpg',  
+        top:220  
+    }); 		
+    
+    var H3 = Ti.UI.createImageView({  
+        url:'/images/Top_food_water.jpg',  
+        top:650  
+    });     
 	
 /*
 	// Frame rate can be changed (fps can not be changed after the game is loaded)
@@ -194,6 +264,51 @@ game.addEventListener('touchend_pointer', onTouchEnd); // Called only on Android
 // Add your game view
 //window.add(game);
 
+    H2.addEventListener('touchstart',function(e){
+    	
+    	Message.text = "おされてる～";
+
+    });
+    
+H2.addEventListener('touchend', function(e){
+    Message.text = "離れたね～";
+});
+    
+
+window.add(H1);
+window.add(Point);
+window.add(Message);
+window.add(H2);
+window.add(H3);
+
+	for(var i = 0;i < 100;i++)
+	{
+		
+	   var U1 = Ti.UI.createImageView({  
+	        url:'/images/chichi/un_00.png',  
+	        top:0  
+	    }); 
+	    U1.layout  = 'vertical';
+	    U1.top = -(Math.random() % 200) * 500;
+	    U1.left = (Math.random()%20) * 500;
+
+		var r = (Math.random()%100)+1;
+	    U1.height = 48 * r* 0.5;
+	    U1.width = 48 * r * 0.5;
+
+	    		
+		if(i % 3 == 0)
+		{
+	    img.push(U1);
+	   }else
+	  	if(i % 3 == 1)
+	  	{
+	  		img.push(U1);
+	  	}else{
+	  		img.push(U1);
+	  	}
+		window.add(img[i])
+	}
 
 //window.open({fullscreen:true, navBarHidden:true});var window = Ti.UI.createWindow({backgroundColor:'black'});
 return window;
