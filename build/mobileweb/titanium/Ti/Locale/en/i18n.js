@@ -1,0 +1,1 @@
+define({"shop": "shop", "home": "home", "welcome": "Welcome to %s!", "config": "config", "zukan": "zukan"});

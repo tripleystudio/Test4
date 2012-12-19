@@ -5,10 +5,11 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 2 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.013000 seconds on emulator to get ready
+[DEBUG] waited 0.015000 seconds on emulator to get ready
 [DEBUG] com.example.Test4 installed? False
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
+[TRACE] COPYING MODIFIED FILE: C:\TitaniumProject\Test4\Resources\home\home.js => C:\TitaniumProject\Test4\build\android\bin\assets\Resources\home\home.js
 [TRACE] Generating Java Classes
 [DEBUG] Processing Android resource drawables
 [DEBUG] found special platform files dir = C:\TitaniumProject\Test4\platform\android
@@ -36,6 +37,7 @@ Logfile initialized
 [DEBUG] found drawable-notlong-port-mdpi splash screen at C:\TitaniumProject\Test4\Resources\android\images\res-notlong-port-mdpi\default.png
 [DEBUG] copying C:\TitaniumProject\Test4\Resources\android\images\res-notlong-port-mdpi\default.png splash screen to C:\TitaniumProject\Test4\build\android\res\drawable-notlong-port-mdpi\background.png
 [DEBUG] found splash screen at C:\TitaniumProject\Test4\build\android\bin\assets\Resources\default.png
+[DEBUG] Added 'screenSize' to <activity android:configChanges> because targeted api level 14 is >= 13
 [TRACE] Writing out AndroidManifest.xml
 [DEBUG] adding C:\TitaniumProject\Test4\build\android\gen\com\example\Test4\R.java to javac build list
 [DEBUG] adding C:\TitaniumProject\Test4\build\android\gen\com\example\Test4\Test4Activity.java to javac build list
@@ -48,6 +50,8 @@ Logfile initialized
 [DEBUG] from resource zip => assets/Resources/home/config.js
 [DEBUG] from resource zip => assets/Resources/home/home.js
 [DEBUG] from resource zip => assets/Resources/home/shop.js
+[DEBUG] from resource zip => assets/Resources/images/chichi/l_078.png
+[DEBUG] from resource zip => assets/Resources/images/chichi/maru.png
 [DEBUG] from resource zip => assets/Resources/images/chichi/un_00.png
 [DEBUG] from resource zip => assets/Resources/images/chichi/un_01.png
 [DEBUG] from resource zip => assets/Resources/images/chichi/un_02.png
@@ -67,6 +71,7 @@ Logfile initialized
 [DEBUG] from resource zip => assets/Resources/images/osiri.png
 [DEBUG] from resource zip => assets/Resources/images/title.jpg
 [DEBUG] from resource zip => assets/Resources/list/esa.js
+[DEBUG] from resource zip => assets/Resources/list/get.js
 [DEBUG] from resource zip => assets/Resources/list/winwin.js
 [DEBUG] from resource zip => assets/Resources/list/zukan.js
 [DEBUG] from resource zip => assets/Resources/ApplicationTabGroup.js
@@ -78,7 +83,6 @@ Logfile initialized
 [DEBUG] from resource zip => assets/Resources/head.png
 [DEBUG] from resource zip => assets/Resources/http.js
 [DEBUG] from resource zip => assets/Resources/osiri.png
-[DEBUG] from resource zip => assets/Resources/ti.cloud.js
 [DEBUG] from resource zip => assets/app.json
 [DEBUG] from resource zip => assets/index.json
 [DEBUG] from resource zip => assets/tiapp.xml
@@ -118,13 +122,10 @@ Logfile initialized
 [DEBUG] from JAR C:\Users\yoshiki\AppData\Roaming\Titanium\mobilesdk\win32\2.1.4.GA\android\modules\titanium-ui.jar => ti/modules/titanium/ui/widget/webview/json2.js
 [DEBUG] from JAR C:\Users\yoshiki\AppData\Roaming\Titanium\mobilesdk\win32\2.1.4.GA\android\modules\titanium-ui.jar => ti/modules/titanium/ui/widget/webview/polling.js
 [DEBUG] from JAR C:\Users\yoshiki\AppData\Roaming\Titanium\mobilesdk\win32\2.1.4.GA\android\modules\titanium-ui.jar => ti/modules/titanium/ui/widget/webview/polling.min.js
-[DEBUG] installing native lib: C:\Users\yoshiki\AppData\Roaming\Titanium\modules\android\com.googlecode.quicktigame2d\1.2\libs\armeabi\libcom.googlecode.quicktigame2d.so
-[DEBUG] installing native lib: C:\Users\yoshiki\AppData\Roaming\Titanium\modules\android\com.googlecode.quicktigame2d\1.2\libs\armeabi-v7a\libcom.googlecode.quicktigame2d.so
-[DEBUG] installing native lib: C:\Users\yoshiki\AppData\Roaming\Titanium\modules\android\com.googlecode.quicktigame2d\1.2\libs\x86\libcom.googlecode.quicktigame2d.so
 [DEBUG] installing native SDK libs
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 2 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.013000 seconds on emulator to get ready
+[DEBUG] waited 0.014000 seconds on emulator to get ready
 [INFO] Installing application on device
 [INFO] Application installed. Launch from drawer on Home Screen

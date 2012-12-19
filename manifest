@@ -1,8 +1,8 @@
-#appname: Test4
-#publisher: yoshiki
-#url: http://
-#image: appicon.png
-#appid: com.example.Test4
-#desc: undefined
-#type: mobile
-#guid: b0850bdf-8dcb-4372-aad3-2496a07c28cb
+#appname:Test4
+#publisher:yoshiki
+#url:http://
+#image:appicon.png
+#appid:com.example.Test4
+#desc:not specified
+#type:mobile
+#guid:b0850bdf-8dcb-4372-aad3-2496a07c28cb

@@ -1,0 +1,1 @@
+define({"shop": "\u30b7\u30e7\u30c3\u30d7", "home": "\u30db\u30fc\u30e0", "welcome": "%s\u3078\u3088\u3046\u3053\u305d!", "config": "\u8a2d\u5b9a", "zukan": "\u56f3\u9451"});

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <deployment-targets>
-        <target device="mobileweb">false</target>
+        <target device="mobileweb">true</target>
         <target device="iphone">false</target>
         <target device="ipad">false</target>
         <target device="android">true</target>
@@ -40,6 +40,9 @@
         <TabHost android:id="@android:id/tabhost"
             android:layout_height="fill_parent"
             android:layout_width="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest>
+    <supports-screens android:anyDensity="false"/>
+</manifest>            
             <LinearLayout android:layout_height="fill_parent"
                 android:layout_width="fill_parent"
                 android:orientation="vertical" android:padding="0dp">
@@ -52,6 +55,7 @@
                     android:layout_weight="0" android:layout_width="fill_parent"/>
             </LinearLayout>
         </TabHost>
+        <tool-api-level>14</tool-api-level>
     </android>
     <mobileweb>
         <precache/>
@@ -61,8 +65,5 @@
         </splash>
         <theme>default</theme>
     </mobileweb>
-    <modules>
-        <module platform="android" version="1.2">com.googlecode.quicktigame2d</module>
-        <module platform="commonjs" version="2.3.0">ti.cloud</module>
-    </modules>
+    <modules/>
 </ti:app>
