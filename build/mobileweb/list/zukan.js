@@ -44,33 +44,20 @@ for (var i=0;i<rowData.length;i++)
         width:120,  
         height:120,  
     }); 	  
-  /*
-    var image = Ti.UI.createImageView({  
-        url:'/images/ene1.png',  
-        top:5,  
-        left:5,  
-        width:60,  
-        height:60,  
-        bottom:5  
-    });  
-      */
-     /*
-    var username = Ti.UI.createLabel({  
-        text:rowData[i].price,  
-        color:"#000000",  
-        font:{fontSize:36,fontWeight:'bold'},  
-        top:5,  
-//        left:70,  
-        right:10,  
-        height:'auto'  
-    });  
-    */  
-    var tweet = Ti.UI.createLabel({  
+
+     var tweet = Ti.UI.createLabel({  
     	font:{fontSize:50,fontWeight:'bold'},  
         text:rowData[i].name,  
         color:"#202020",  
         left:150  
     });  
+    
+    var num = Ti.UI.createLabel({  
+    	font:{fontSize:50,fontWeight:'bold'},  
+        text:Ti.App.Items[i],  
+        color:"#202020",  
+        right:0  
+    });      
     
     var info = Ti.UI.createLabel({  
         text:rowData[i].info,  
@@ -87,7 +74,8 @@ for (var i=0;i<rowData.length;i++)
     });  
       
     row.add(image);  
-    row.add(tweet);  
+    row.add(tweet); 
+    row.add(num);  
     row.add(info);
 
     
